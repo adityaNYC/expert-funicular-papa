@@ -2,28 +2,24 @@
 
 <h1>Hello CIS 486!</h1>
 
-<p1>My name is Aditya Balyan and i am a type 6! An Enneagram 6 is called The Loyalist. They are fun, energetic, dependable, and honest at their best. In times of disintegration, they can become anxious and self-doubting, indecisive, and overly dependent on fail safes rather than their instincts or judgment.</p2>
+<p>My name is Aditya Balyan and I am a type 6! An Enneagram 6 is called The Loyalist. They are fun, energetic, dependable, and honest at their best. In times of disintegration, they can become anxious and self-doubting, indecisive, and overly dependent on fail safes rather than their instincts or judgment.</p>
 
 <%= myTypeClient %> 
 
-<% for (var i=0; i< myResultClient.length; i++ ) { %>
-    
+<% for (var i = 0; i < myResultClient.length; i++) { %>
     <li> <%= myResultClient[i].userName %> </li>
-
 <% } %> 
 
 <form method="get" action="/name">
-    <p>Tell us your name!: </p>
-    <input type="text" name="ejsFormName" value=" <%=myTypeClient %> "> 
+    <p>Tell us your name! Or something: </p>
+    <input type="text" name="ejsFormName" value="<%= myTypeClient %>"> 
     <input type="submit">
-  </form>
+</form>
 
+<footer>
+    <a href="https://github.com/adityaNYC/solid-fishstick-snowcats-november" target="_blank">Source Code</a>
+</footer>
 
-<Footer>
-
-    <a href="https://github.com/adityaNYC/solid-fishstick-snowcats-november" target=""_blank>Source Code</a>
-</Footer>
-
-<button class="btn btn-primary">boostrap working?</button>
+<button class="btn btn-primary">Bootstrap working?</button>
 
 <%- include('partials/html-end.ejs') %>
